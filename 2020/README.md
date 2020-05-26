@@ -48,9 +48,7 @@ WinpPythonインストール後，WinPythonのディレクトリにあるコマ�
 いくつかバリエーションがありますが`Winpython64-3.8.2.0.exe`を使ってインストールした場合，標準で本演習で用いるライブラリ群が全て入っていますので，以上で手順は完全に終了です（以下の作業は完全に不要です）．
 
 ## For Mac
-macOSには/usr/bin/pythonとしてpython2.7がプリインストールされており、また最新版のmacOS Catalina(10.15)には/usr/bin/python3としてpython3がプリインストールされています。
-これらのpythonはシステムやサードパーティソフトウェアが使用するものです。
-これらのpythonを今回の実験やこれからのプログラミング等に使用することもできますが、OSのアップグレードの際にインストールしたライブラリが消えてしまったり、設定を変更するうちにほかのシステムが正常に動かなくなったりすることがあるので新しくpythonをインストールするのがよいでしょう。
+macOSには/usr/bin/pythonとしてpython2.7がプリインストールされており、また最新版のmacOS Catalina(10.15)には/usr/bin/python3としてpython3がプリインストールされています。これらのpythonはシステムやサードパーティソフトウェアが使用するものです。これらのpythonを今回の実験やこれからのプログラミング等に使用することもできますが、OSのアップグレードの際にインストールしたライブラリが消えてしまったり、設定を変更するうちにほかのシステムが正常に動かなくなったりすることがあるので新しくpythonをインストールするのがよいでしょう。
 Macにpythonをインストールするには次のような方法があります。
 
 #### [公式サイト](https://www.python.org/downloads/mac-osx/)のインストーラを用いる  
@@ -60,10 +58,14 @@ Macにpythonをインストールするには次のような方法がありま�
 HomebrewとはMacのパッケージ管理ツールです。Homebrewを使うことでpythonだけでなく様々なパッケージの管理を一元的に行うことができます。Homebrewのインストール要件は
 - macOS High Sierra(10.13) 以上のバージョン
 - Command Line Tools for Xcodeがインストールされている
+
 です。Command Line Toolsは、https://developer.apple.com/download/more/からインストーラをダウンロードするか、`xcode-select install`コマンドでインストールできます。
+
 Homebrewのインストールは[公式サイト](https://brew.sh/index_ja)にある通り、
+
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 を実行します。
+
 
 Homebrewを用いたpython3をインストールします。
 `brew install python`
