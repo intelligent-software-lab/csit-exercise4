@@ -59,17 +59,16 @@ HomebrewとはMacのパッケージ管理ツールです。Homebrewを使うこ�
 - macOS High Sierra(10.13) 以上のバージョン
 - Command Line Tools for Xcodeがインストールされている
 
-です。Command Line Toolsは、https://developer.apple.com/download/more/からインストーラをダウンロードするか、`xcode-select install`コマンドでインストールできます。
+です。Command Line Toolsは、https://developer.apple.com/download/more/ からインストーラをダウンロードするか、`xcode-select install`コマンドでインストールできます。
 
-Homebrewのインストールは[公式サイト](https://brew.sh/index_ja)にある通り、
-
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-を実行します。
-
-
-Homebrewを用いたpython3をインストールします。
-`brew install python`
-
+Homebrewをインストールします。[公式サイト](https://brew.sh/index_ja)にある通り、
+````
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+````
+Homebrewでpython3をインストールします。
+````
+$ brew install python
+````
 PATHの設定をします。シェルにbashを使用している場合、~/.bash_profileに以下の行を追加し、
 ````
 export PATH=/usr/local/bin:$PATH
