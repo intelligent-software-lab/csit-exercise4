@@ -1,15 +1,28 @@
 # 2020年度スケジュール
-TBD
+実施日時：6/19-8/7の毎週金曜日5限（16:30-18:00)
+
+  - 6/19：初回ガイダンス・準備
+  - 6/26-7/31：コンペティションに参加
+  - 7/31：コンペティション終了（23時59分)
+  - 8/7：レポート作成日，レポート締切
 
 # Pythonの利用方法・インストールに関するポインタ
-新型コロナウイルスの蔓延により，自宅で演習を行って頂くことになるかもしれません．
-そのため，以下ではPythonおよびPythonライブラリの利用方法・インストールのためのポインタと，Python開発環境におけるいくつかの事項を紹介します．
+新型コロナウイルスの蔓延により，~~自宅で演習を行って頂くことになるかもしれません~~自宅で演習を行っていただくことになりました（6/16追記)．
+本演習ではプログラミング言語[**Python**](https://www.python.org/)と，ブラウザ上で動作するインタラクティブなPython実行環境を提供する[**Jupyter Lab (Notebook)**](https://jupyter.org)（といくつかのライブラリ）を使用します．
+そのため，以下ではPythonおよびPythonライブラリの利用方法・インストールのためのポインタ（詳細はリンク先を参照してください）と，Python開発環境におけるいくつかの事項を紹介します．
 あくまで一例であり，別の方法でインストールして頂いても全く問題はありません．
 
 最初に注意ですが，何らかのソフトウェアをインストールする際に，そのインストール方法については適当に検索すると様々情報が出てくると思いますが．基本的には**まず公式のインストレーションを見ましょう．**
 公式のインストレーションを読むのがどうしてもつらい・公式のインストレーション通りに手順を踏んでもどうしてもできない場合に，Web上に存在する様々な日本語の非公式記事を参考にすると良いでしょう．
 
-## Google Colabを用いる
+詳しく説明する前に，以下で紹介する方法を簡単にまとめておきます．
+  - Google Colabを用いる：Googleアカウント+インターネット環境があれば良い，インストール等不要で最も簡単．
+  - WSLを用いる (Windows 10)：Microsoftが提供するWindows上でLinuxを動かす機能を使ってLinuxを動作させ，そのLinux上にPythonをインストールする．WSLをインストールした時点でPythonが使え，さらに他のライブラリ等も比較的簡単にインストールができる．
+  - WinPythonを用いる（Windows)：ポータブルなPython環境を作る．ダウンロード後，そのディレクトリにあるコマンドプロンプトを起動するとPythonが使える．
+  - 公式インストーラを用いる（Mac)：公式のインストーラを用いてPythonをインストールする．
+  - Homebrewを用いる（Mac)：Macのパッケージ管理システムであるHomebrewを用いてPythonをインストールする．
+
+## Google Colabを用いる（OS非依存，推奨）
 [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)は，クラウド上のJupyter Notebook実行環境を提供するwebサービスです．
 Google Colabを利用すれば，**インターネットにつながってさえいれば余計な環境構築・インストール作業無しにJupyter Notebookを動かすことができます**．
 ColabはGoogleアカウントがあればすぐに使えます．
@@ -19,13 +32,14 @@ ColabはGoogleアカウントがあればすぐに使えます．
 詳しくは[ioに関する公式のurl](https://colab.research.google.com/notebooks/io.ipynb)を参考にしてください．
 Colabを用いる場合はGoogleアカウントの作成以外特にすることはありません（上述の外部データの利用方法について調べておく，くらいです）．
 
-## For Windows 方法1：Windows Subsystem for Linux (WSL）を用いる
+## For Windows
+### 方法1：Windows Subsystem for Linux (WSL）を用いる
 WSLはWindowsの公式が提供するWindows 10上でLinuxを動かす機能です．
 Windowsで直接開発環境を整えることはしんどい場合が多いですが，WSLでLinuxを動かせるようにし，そのLinux環境上に開発環境を整えることは比較的簡単であることが多いです．
-以下の公式のURLの手順「Windows Subsystem for Linux を有効にし、ディストリビューションをインストールする」まで行えば，WSLがひとまず使用可能になります（2020/04/22）．
+[公式のURLの手順](https://docs.microsoft.com/ja-jp/learn/modules/get-started-with-windows-subsystem-for-linux/)の「Windows Subsystem for Linux を有効にし、ディストリビューションをインストールする」まで行えば，WSLがひとまず使用可能になります（2020/04/22）．
+
 Pythonは標準で使えるようになっているはずなので，それでPythonのインストールについては終了です．
 
-https://docs.microsoft.com/ja-jp/learn/modules/get-started-with-windows-subsystem-for-linux/
 
 ライブラリのインストールについては，後述の「Pythonのライブラリのインストールに関するポインタ」をご覧ください．
 
@@ -33,10 +47,8 @@ Pythonに限らず，WSL上で開発環境を整える場合は基本的にLinux
 したがって，対応するLinuxディストリビューションにおける環境構築方法を参考にすると良いです（もちろん，WSL特有の事項も存在しますが）．
 WSLは本演習に限らず今後の生活に役に立つと思うので，多少面倒かもしれませんがこの方法はおすすめです．
 
-## For Windows 方法2：WinPythonを用いる
+### 方法2：[WinPython](https://winpython.github.io/)を用いる
 Windowsが10でなかったり，何らかの都合によりどうしてもWSLを使いたくない，今後のことはどうでもよいのでとにかく楽に演習を行えるようにしたいという場合，WinPythonを利用するのが便利です．
-
-https://winpython.github.io/
 
 WinPythonはポータブルなPythonの実行環境を提供します．
 WinpPythonインストール後，WinPythonのディレクトリにあるコマンドプロンプトを起動すると，そのコマンドプロンプト上でPythonが使えるようになります．
@@ -63,21 +75,21 @@ HomebrewとはMacのパッケージ管理ツールです。Homebrewを使うこ�
 です。Command Line Toolsは、https://developer.apple.com/download/more/ からインストーラをダウンロードするか、`xcode-select install`コマンドでインストールできます。
 
 Homebrewをインストールします。[公式サイト](https://brew.sh/index_ja)にある通り、
-````
+```
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-````
+```
 Homebrewでpython3をインストールします。
-````
+```
 $ brew install python
-````
+```
 PATHの設定をします。シェルにbashを使用している場合、`~/.bash_profile`に以下の行を追加し、
-````
+```
 export PATH=/usr/local/bin:$PATH
-````
+```
 設定を反映させます。
-````
+```
 $ source ~/.bash_profile
-````
+```
 シェルにzshを使用している場合は対応した設定ファイルを編集してください。
 
 # Pythonのライブラリのインストールに関するポインタ
@@ -86,19 +98,21 @@ $ source ~/.bash_profile
 - [SciPy](https://www.scipy.org/)
 - [scikit-learn](https://scikit-learn.org/stable/)
 - [jupyter](https://jupyter.org/)
+- [pandas](https://pandas.pydata.org/)
 
 以下に公式のインストレーションを列挙します：
 - [NumPy/SciPy](https://www.scipy.org/install.html)
 - [scikit-learn](https://scikit-learn.org/stable/install.html)
 - [jupyter](https://jupyter.org/install)
+- [pandas](https://pandas.pydata.org/getting_started.html)
 
 ライブラリが豊富なプログラミング言語には，**パッケージ管理システム**が存在することがほとんどです．
 これは，ライブラリを管理し，インストール・アンインストール・アップデート，依存関係の管理等を簡単に行うことを可能にするようなソフトウェアです．
 Pythonにも[**pip**](https://pip.pypa.io/en/stable/)というパッケージ管理システムが存在します．
 例えば，パッケージ`hoge`をインストールしたいとき，pipを用いると，
-
-    pip install hoge
-
+```
+$ pip install hoge
+```
 でインストールが可能です（もしくは `pip3 install hoge`）．
 上述のライブラリのインストレーションでもpipを用いたものが紹介されています．
 pipはPython3.5以降であればインストール後から使えるはずです．
