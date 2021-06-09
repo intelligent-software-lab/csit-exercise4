@@ -26,7 +26,7 @@
 [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)は，クラウド上のJupyter Notebook実行環境を提供するwebサービスです．
 Google Colabを利用すれば，**インターネットにつながってさえいれば余計な環境構築・インストール作業無しにJupyter Notebookを動かすことができます**．
 ColabはGoogleアカウントがあればすぐに使えます．
-主要なほとんどのブラウザ上で動作するはずです．
+主要なほとんどのブラウザ上で動作するはずです． 
 演習で提供するノートブックは「ファイル」->「ノートブックをアップロード」でColab上で利用可能になります．
 本演習で用いるデータをGoogleドライブに置くことでそれらをColab上で用いることができます．
 詳しくは[ioに関する公式のurl](https://colab.research.google.com/notebooks/io.ipynb)を参考にしてください．
